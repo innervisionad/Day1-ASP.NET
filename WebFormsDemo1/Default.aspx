@@ -8,12 +8,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID ="ScriptManager1" runat="server"></asp:ScriptManager>
     <div>
         <h1>Coding Tasks</h1>
 
        <h2 style="height: 27px"> My very first ASP.NET Web Forms page </h2>
+
         
-           <asp:Label ID="Label1" runat="server" Text="Please type in your name: "></asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Click me!" OnClick="Button1_Click" />       
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                       <asp:Label ID="Label1" runat="server" Text="Please type in your name: "></asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Click me!" OnClick="Button1_Click" />       
     <br /><br />
          <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
     <br /><br />
@@ -69,9 +73,10 @@
           <br /> <br />
         <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
 
+            </ContentTemplate>
 
-
-
+        </asp:UpdatePanel>
+    
 
 
 
