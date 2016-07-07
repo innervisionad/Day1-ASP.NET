@@ -1,26 +1,24 @@
-﻿.bodyBack {
+﻿
+.bodyBack {
     opacity:0.85;
     background-color:antiquewhite; 
      font-family: 'Cinzel Decorative', cursive;
 }
 
 .jumbotron.banner{
- 
     text-align: center;
     text-align: center;
     border-bottom: solid 5px #94c7c7; 
-    background-image:url('Tile transparent.jpg');   
- 
-
+    background-image:url('Tile transparent.jpg');
 }
 
 .textLabel{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.2em;
 }
+
 .col-sm-6.textBoxInfo{
-  
-    border:solid 2px #94c7c7;
+    border:solid 2px #e19f05;
     box-shadow:rgba(0,0,0,0.5) 5px 5px 5px;
     border-radius:5px;
     background-image:url(TextBoxImage.jpg);
@@ -34,7 +32,6 @@
    border-radius:2px;
 }
 
-
 .btn{
     margin-top:20px;
     margin-bottom:20px;
@@ -44,8 +41,7 @@
     font-weight: bolder;
     background-repeat:space;
 }
-.btn:hover{
-       
+.btn:hover{      
        box-shadow:rgba(0,0,0,0.25) 2px 2px 2px;
 }
 
@@ -54,5 +50,4 @@ body{
      font-weight: bold;
      background-image:url('background imagev2.jpg');
      background-repeat:round;
-     
 }

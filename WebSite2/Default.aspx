@@ -29,7 +29,7 @@
                 <asp:TextBox ID="EncryptText" CssClass="inputBox" runat="server" Rows="10" Height="150px" Width="100%"></asp:TextBox> 
         </div><!--closing tag for column -->
         <div class="col-sm-6 textBoxInfo">
-                <asp:Label ID="Label1" runat="server" Text="The Caesar cypher is one of the earliest cyphers to exist. This cypher takes a plain text message and shifts the letters value to make a coded message.The letter 'A', for example, can be present in the plain text message, and the cypher moves the letters value 13 places which results in the letter'N' in the coded message."></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="The Caesar cypher is one of the earliest cyphers to exist. This cypher takes a plain text message and shifts the letters value to make a coded message.The letter 'A', for example, can be present in the plain text message, and the cypher moves the letters value 13 places which results in the letter 'N' in the coded message."></asp:Label>
         </div> <!-- closing tag for column-->                
     </div> <!--closing tag for row-->
 
