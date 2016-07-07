@@ -1,0 +1,57 @@
+﻿@*use IEnumerable so that you can use a foreach loop*@
+@model IEnumerable<MVCMoviesAC.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    table tr td{
+        border:solid 2px black;
+        
+    }
+
+</style>
+<h2>Index</h2>
+
+<table>
+    <tr>
+        @*display table headers, using fieldnames from DB*@
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        //display a row of data from db
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate.Value.Year)
+            </td>    
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>    
+            <td>
+                £@Html.DisplayFor(modelItem => item.Price)
+            </td> 
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  Id = item.Id})
+                @Html.ActionLink("Details", "Details", new { Id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { Id = item.Id })
+            </td>              
+        </tr>
+    }
+
+</table>

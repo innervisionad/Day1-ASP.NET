@@ -5,10 +5,15 @@
 
 <h2>Party Invitation</h2>
 
-<p>We're going to have a party! <br/>
-</p>
-<img src="~/Images/background image.jpg" />
-<br/>
-<!--'at'Html very useful code to use-->
-@Html.ActionLink("RSVP now!", "RsvpForm")
+<div class="text-center">
+    <h2>We're going to have a party!</h2>
+    <h3>And you are invited!</h3>
+    <img src="~/Images/background image.jpg" />
+    <br/>
+    <div class="btn btn-success">
+        <!--'at'Html very useful code to use-->
+        @Html.ActionLink("RSVP now!", "RsvpForm")
+    </div>
+</div>
+
 

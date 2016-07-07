@@ -4,27 +4,47 @@
     ViewBag.Title = "RsvpForm";
 }
 
-<h2>RsvpForm</h2>
 
-@using (Html.BeginForm())
-{
-    //displays error messages
-    @Html.ValidationSummary()
 
-    //inside the () is a lambda expression
-    <p>Your name: @Html.TextBoxFor(x => x.Name)</p>
-    <p>Your Email: @Html.TextBoxFor(x => x.Email)</p>
-    <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+<div class="panel-heading panel-success">
+    <div class="panel-heading text-center"><h4>RSVP</h4></div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            //displays error messages
+            @Html.ValidationSummary()
 
-    <p>Will you attend?
-        @Html.DropDownListFor(x => x.WillAttend, new[] {
+            <div class="form-group">
+                @*inside the () is a lambda expression*@
+                <label>Your name: </label> 
+                @Html.TextBoxFor(x => x.Name, new { @class="form-control"})
+            </div>
+
+            <div class="form-group">
+                <label>Your Email: </label>
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control"})
+            </div>
+
+            <div class="form-group">
+                <label>Your phone: </label>
+                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+            </div>
+                
+                    
+            <div class="form-group">
+                <label>Will you attend?</label>
+                    @Html.DropDownListFor(x => x.WillAttend, new[] {
        new SelectListItem() { Text = "Yes, I'll be there.", Value = bool.TrueString },
        new SelectListItem() {Text = "No, I can't come.", Value = bool.FalseString },
 
                 },
-           "Choose an option")
+           "Choose an option", new { @class = "form-control" })
+        </div>
+        <div class="text-center">
+            <input class="btn btn-success" type="submit" value="Submit RSVP" />
+        </div>
+        }
 
-    </p>
-    <input type="submit" value="Submit RSVP"/>
-}
+    </div>@*panel body*@
 
+</div>@**@
