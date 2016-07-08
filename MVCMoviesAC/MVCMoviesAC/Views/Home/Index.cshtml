@@ -4,16 +4,26 @@
 @{
     ViewBag.Title = "Index";
 }
-<style>
-    table tr td{
-        border:solid 2px black;
-        
-    }
 
-</style>
 <h2>Index</h2>
 
-<table>
+
+
+<br/>
+    @Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm())
+    {
+        <p>
+            Genre: @Html.DropDownList("movieGenre", "All")
+            Title: @Html.TextBox("SearchString")
+            <input type="submit" value="Filter" class="btn btn-default" />
+        </p>
+            
+        
+    }
+<br/>
+<table class="table">
     <tr>
         @*display table headers, using fieldnames from DB*@
         <th>
@@ -44,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>    
             <td>
-                £@Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Price)
             </td> 
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  Id = item.Id})

@@ -1,4 +1,10 @@
 ﻿
+body{
+     font-family: 'Cinzel Decorative', cursive;
+     font-weight: bold;
+     background-image:url('background imagev2.jpg');
+     background-repeat:round;
+}
 .bodyBack {
     opacity:0.85;
     background-color:antiquewhite; 
@@ -32,6 +38,7 @@
    border-radius:2px;
 }
 
+
 .btn{
     margin-top:20px;
     margin-bottom:20px;
@@ -41,13 +48,7 @@
     font-weight: bolder;
     background-repeat:space;
 }
-.btn:hover{      
+.btn:hover{  
        box-shadow:rgba(0,0,0,0.25) 2px 2px 2px;
 }
 
-body{
-     font-family: 'Cinzel Decorative', cursive;
-     font-weight: bold;
-     background-image:url('background imagev2.jpg');
-     background-repeat:round;
-}
